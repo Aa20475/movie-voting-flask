@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Signup page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  </head>
+  <body>
+    <div>
+      <h1>Fill in!</h1>
+      <br>
+      <form action="" method="POST">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input type="submit" value="Submit">
+      </form>
+      {% if error %}
+        <p><strong>Error:</strong> {{ error }}
+      {% endif %}
+    </div>
+  </body>
+</html>

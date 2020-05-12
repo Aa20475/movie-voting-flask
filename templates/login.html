@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div>
+      <h1>Please login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{
+          request.form.username }}">
+         <input type="password" placeholder="Password" name="password" value="{{
+          request.form.password }}">
+        <input type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p><strong>Error:</strong> {{ error }}
+        <p><strong>Sign up instead!</strong></p>
+
+      <button onclick="window.location.href='./signup'">Sign up!</button>
+      {% endif %}
+    </div>
+  </body>
+</html>
